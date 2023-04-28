@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_kinoKZ/screen/soonMovie.dart';
 
-import 'package:flutter_application_1/constans.dart';
-import 'package:flutter_application_1/components/ratingNumber.dart';
-import 'package:flutter_application_1/components/dateScorl.dart';
-import 'package:flutter_application_1/components/aboutFilm.dart';
-import 'package:flutter_application_1/bannerimage.dart';
-import 'soonMovie.dart';
 import 'now_movies.dart';
 
 class Afisha extends StatefulWidget {
+  const Afisha({super.key});
+
   @override
   _AfishaState createState() => _AfishaState();
 }
@@ -18,7 +15,7 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: 5, vsync: this);
     super.initState();
   }
 
@@ -34,48 +31,57 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         title: TextButton.icon(
           onPressed: () {},
-          icon: Text(
-            "Aлматы",
-            style: TextStyle(
-              fontSize: 15.0,
-              fontFamily: "Raleway",
-              color: Colors.black,
-            ),
+          icon: Row(
+            children: [
+              Image.asset(
+                "assets/movieBannerImages/logo.png",
+                width: 30,
+                height: 30,
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              const Text(
+                "Aлматы",
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontFamily: "Raleway",
+                  color: Colors.black,
+                ),
+              ),
+            ],
           ),
-          label: Icon(
+          label: const Icon(
             Icons.keyboard_arrow_down,
             color: Colors.black,
             size: 20,
           ),
         ),
-        actions: [
-          Padding(
-            child: Icon(Icons.menu),
-            padding: EdgeInsets.only(right: 20),
-          )
-        ],
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Container(
-                margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                margin: const EdgeInsets.only(
+                    left: 5, right: 5, top: 10, bottom: 10),
                 child: TextField(
                     decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Фильмы, кинотеатры, новости",
                   fillColor: Colors.black12,
                   filled: true,
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.search),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 0, color: Colors.transparent),
+                    borderSide:
+                        const BorderSide(width: 0, color: Colors.transparent),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                 ))),
             Container(
-              margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+              margin:
+                  const EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
               height: 45,
               decoration: BoxDecoration(
                 color: Colors.transparent,
@@ -85,7 +91,7 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
               ),
               child: TabBar(
                 isScrollable: true,
-                indicatorColor: Color.fromARGB(255, 240, 61, 61),
+                indicatorColor: const Color.fromARGB(255, 240, 61, 61),
                 controller: _tabController,
                 // give the indicator a decoration (color and border radius)
                 indicator: BoxDecoration(
@@ -96,7 +102,7 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
                 ),
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.black,
-                tabs: [
+                tabs: const [
                   Tab(
                     text: 'Сейчас',
                   ),
@@ -104,10 +110,13 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
                     text: 'Скоро',
                   ),
                   Tab(
-                    text: 'Детям',
+                    text: 'Комедия',
                   ),
                   Tab(
-                    text: 'Киноклуб Борецкого',
+                    text: 'Трейлер',
+                  ),
+                  Tab(
+                    text: 'Мультфильмы',
                   ),
                 ],
               ),
@@ -116,7 +125,7 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
             Expanded(
               child: TabBarView(
                 controller: _tabController,
-                children: [
+                children: const [
                   NowMovie(),
                   SoonMovie(),
                   NowMovie(),

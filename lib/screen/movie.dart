@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/constans.dart';
-import 'package:flutter_application_1/components/ratingNumber.dart';
-import 'package:flutter_application_1/components/dateScorl.dart';
-import 'package:flutter_application_1/components/aboutFilm.dart';
+import 'package:flutter_kinoKZ/constans.dart';
+import 'package:flutter_kinoKZ/components/ratingNumber.dart';
+import 'package:flutter_kinoKZ/components/dateScorl.dart';
+import 'package:flutter_kinoKZ/components/aboutFilm.dart';
 
 class MovieDescripButton extends StatefulWidget {
   @override
@@ -34,7 +34,7 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
           Expanded(
             flex: 1,
             child: Image.asset(
-              "movieBannerImages/johnWick.jpg",
+              "assets/movieBannerImages/johnWick.jpg",
               fit: BoxFit.cover,
               width: double.infinity,
             ),

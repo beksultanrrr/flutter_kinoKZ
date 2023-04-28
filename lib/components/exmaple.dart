@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/dateScorl.dart';
-import 'package:flutter_application_1/constans.dart';
-import 'package:flutter_application_1/components/ratingNumber.dart';
+
+import 'package:flutter_kinoKZ/constans.dart';
+import 'package:flutter_kinoKZ/components/ratingNumber.dart';
 
 class StackOver extends StatefulWidget {
+  const StackOver({super.key});
+
   @override
   _StackOverState createState() => _StackOverState();
 }
@@ -101,7 +103,7 @@ class _StackOverState extends State<StackOver>
               ),
               labelColor: Colors.white,
               unselectedLabelColor: Colors.black,
-              tabs: [
+              tabs: const [
                 // first tab [you can add an icon using the icon property]
                 Tab(
                   text: 'Place Bid',
@@ -118,7 +120,7 @@ class _StackOverState extends State<StackOver>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: [
+              children: const [
                 // first tab bar view widget
                 Center(
                   child: Text(

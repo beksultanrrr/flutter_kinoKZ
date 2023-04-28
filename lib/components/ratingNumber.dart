@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import '../screen/movie.dart';
 
 class RatingNumber extends StatelessWidget {
-  RatingNumber(
-      {required this.Number,
+  const RatingNumber(
+      {super.key,
+      required this.Number,
       required this.text,
       required this.textColor,
       required this.textSize});
@@ -16,7 +14,7 @@ class RatingNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(9),
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.alphabetic,

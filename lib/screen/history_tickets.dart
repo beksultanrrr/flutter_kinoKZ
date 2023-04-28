@@ -10,7 +10,7 @@ class HistoryTickets extends StatelessWidget {
             height: 40,
           ),
           Expanded(
-            child: Image.asset('movieBannerImages/tickets.png'),
+            child: Image.asset('assets/movieBannerImages/tickets.png'),
           ),
           Expanded(
               flex: 4,

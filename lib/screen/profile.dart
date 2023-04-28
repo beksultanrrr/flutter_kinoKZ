@@ -28,7 +28,7 @@ class _ProfleState extends State<Profle> {
                       borderRadius: BorderRadius.circular(20),
                       child: SizedBox.fromSize(
                         size: Size.fromRadius(48),
-                        child: Image.asset('movieBannerImages/profileImage.jpg',
+                        child: Image.asset('assets/movieBannerImages/profileImage.jpg',
                             fit: BoxFit.cover),
                       ),
                     )),

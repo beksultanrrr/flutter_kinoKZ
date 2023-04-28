@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screen/main_page.dart';
-import 'screen/movie.dart';
-import 'screen/afisha.dart';
-
+import 'package:http/http.dart' as http;
 void main() {
   runApp(const MyApp());
 }
