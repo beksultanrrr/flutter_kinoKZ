@@ -66,7 +66,7 @@ class NowMovie extends StatelessWidget {
           childAspectRatio: 0.7,
           crossAxisSpacing: 8.0,
           mainAxisSpacing: 3,
-          mainAxisExtent: 350),
+          mainAxisExtent: 400),
       itemCount: movies.length,
       itemBuilder: (context, index) {
         final movie = movies[index];

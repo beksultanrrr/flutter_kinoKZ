@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kinoKZ/screen/soonMovie.dart';
-
-import 'now_movies.dart';
+import 'package:flutter_kinoKZ/screen/categories/soonMovie.dart';
+import 'package:flutter_kinoKZ/screen/categories/comedy_movie.dart';
+import 'categories/now_movies.dart';
+import 'package:flutter_kinoKZ/screen/categories/trailer.dart';
 
 class Afisha extends StatefulWidget {
   const Afisha({super.key});
@@ -59,6 +60,7 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
         ),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
+      
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -128,8 +130,8 @@ class _AfishaState extends State<Afisha> with SingleTickerProviderStateMixin {
                 children: const [
                   NowMovie(),
                   SoonMovie(),
-                  NowMovie(),
-                  SoonMovie(),
+                  ComedyMovie(),
+                  TrailerMovies(),
                 ],
               ),
             ),
