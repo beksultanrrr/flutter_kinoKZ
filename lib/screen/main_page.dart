@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_kinoKZ/screen/location.dart';
 import 'afisha.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'profile.dart';
 import 'my_tickets.dart';
-
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -45,8 +45,8 @@ class _NavigationPageState extends State<NavigationPage> {
         ],
       ),
       body: <Widget>[
-        Afisha(),
-        Afisha(),
+        const Afisha(),
+        const Location(),
         MyTickets(),
         Profle()
       ][currentPageIndex],

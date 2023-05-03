@@ -6,6 +6,8 @@ import 'package:flutter_kinoKZ/components/dateScorl.dart';
 import 'package:flutter_kinoKZ/components/aboutFilm.dart';
 
 class MovieDescripButton extends StatefulWidget {
+  const MovieDescripButton({super.key});
+
   @override
   _MovieDescripButtonState createState() => _MovieDescripButtonState();
 }
@@ -16,7 +18,7 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
 
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
     super.initState();
   }
 
@@ -54,8 +56,8 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        RatingNumber(
-                            Number: const Text(
+                        const RatingNumber(
+                            Number: Text(
                               "9.0",
                               style: TextStyle(
                                   fontSize: 35, fontWeight: FontWeight.bold),
@@ -97,7 +99,7 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
                         ),
                         labelColor: Colors.white,
                         unselectedLabelColor: Colors.black,
-                        tabs: [
+                        tabs: const [
                           Tab(
                             text: 'Билеты',
                           ),
@@ -117,7 +119,8 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
                         children: [
                           DateScroll(),
                           AboutFilm(),
-                          Center(
+                          AboutFilm(),
+                          const Center(
                             child: Text(
                               'Buy Now',
                               style: TextStyle(
@@ -129,6 +132,7 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
                         ],
                       ),
                     ),
+                    const Expanded(child: Text("dsdsd"))
                   ]),
             ),
           )
