@@ -132,7 +132,7 @@ class _MovieDescripButtonState extends State<MovieDescripButton>
                         ],
                       ),
                     ),
-                    const Expanded(child: Text("dsdsd"))
+                   
                   ]),
             ),
           )
